@@ -36,9 +36,6 @@ $size-header-pad:		4em;
 /* Header */
 
 	#header {
-		background-attachment:	scroll;
-		background-position:	top left,	center center;
-		background-size:		auto,		cover;
 		left: auto;
 		padding: ($size-header-pad * 1.5) $size-header-pad;
 		position: relative;
@@ -58,12 +55,6 @@ $size-header-pad:		4em;
 /* Footer */
 
 	#footer {
-		background-attachment:	scroll;
-		background-color:		$color-accent2-bg;
-		background-image:		url('images/overlay.png'),		url('../images/bg.jpg');
-		background-position:	top left,						bottom center;
-		background-repeat:		repeat,							no-repeat;
-		background-size:		auto,							cover;
 		bottom: auto;
 		left: auto;
 		padding: $size-header-pad $size-header-pad ($size-header-pad * 1.5) $size-header-pad;
