@@ -5,6 +5,13 @@ date: 2015-02-06T14:37:44.000Z
 categories: update
 ---
 
+```ruby
+def say(phrase)
+  puts phrase
+end
+
+say("Hello world)
+```
 
 Nulla facilisi. Pellentesque id magna eu sapien consectetur pulvinar nec eget massa. Nunc ut volutpat felis. Vestibulum pharetra ligula vel mattis aliquam. Etiam tempor vitae nulla nec euismod. Vivamus eget justo libero. Curabitur dictum, turpis vel porttitor semper, elit turpis vehicula nibh, quis mollis metus tortor at magna.
 
