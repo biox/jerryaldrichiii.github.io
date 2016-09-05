@@ -1,9 +1,9 @@
 title: Strata 
 
 description: >
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Place a description <br />
+  of your blog here. <br />
+  Be sure to add &lt;br /&gt;
 baseurl: "" 
 url: "http://yourdomain.com"
 
