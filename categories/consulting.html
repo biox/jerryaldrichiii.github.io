@@ -1,0 +1,25 @@
+---
+layout: default
+category: consulting
+description: >
+  Posts located here are specific to my career and are intended to document challenges I've encountered while consulting and/or to fill the gaps I've seen in the documentation online. Topics include anything from programming to philosophical ranting. 
+---
+
+<div id="main">
+  {% assign posts = site.posts | where:'category', 'consulting'%}
+  <div class="row">
+    {% for post in posts %}
+      <article class="{% cycle '6u', '6u$' %} 12u(small)">
+         <header>
+          <h3><a href="{{ post.url }}">{{ post.title }}</a></h3></caption>
+        </header>
+        <section>
+          <p><strong>{{ post.summary }}</strong></p>
+        </section>
+        <footer>
+          <p>{{ post.date }}</p>
+        </footer>
+     </article>
+    {% endfor %}
+   </div>
+</div>
