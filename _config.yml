@@ -1,16 +1,13 @@
-title: Strata 
+title: The Wandering IT Consultant 
 
 description: >
-  Replace the text here <br />
-  with a terse description. <br />
-  Be sure to add the &lt;br /&gt;
-baseurl: "" 
-url: "http://yourdomain.com"
+  Ohai! Welcome to my blog.<br />
+  Expect nothing but rambling.<br />
+  All opinions are my own.
 
-twitter_username:     example
-github_username:      example
-linkedin_username:    example
-#google_plus_username: example
-#facebook_username:    example
-#dribbble_username:    example
-email: your-email@domain.com 
+url: "http://blog.jerryaldrichiii.com"
+
+twitter_username:     jerryaldrichiii
+github_username:      jerryaldrichiii
+linkedin_username:    jerryaldrichiii
+email: me@jerryaldrichiii.com 
