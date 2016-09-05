@@ -1,9 +1,9 @@
 title: Strata 
 
 description: >
-  Place a description <br />
-  of your blog here. <br />
-  Be sure to add &lt;br /&gt;
+  Replace the text here <br />
+  with a terse description. <br />
+  Be sure to add the &lt;br /&gt;
 baseurl: "" 
 url: "http://yourdomain.com"
 

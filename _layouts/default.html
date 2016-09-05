@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
   <head>
     <title>{{ site.title }}</title>
@@ -21,7 +22,10 @@
   <body id="top">
     <header id="header">
       <a href="{{ site.url }}" class="image avatar"><img src="/images/avatar.jpg" alt="" /></a>
-      <h1><strong>{{ site.description }}</a></strong></h1>
+      <h1>
+        <strong>{{ site.title }}</strong><br />
+        {{ site.description }}
+      </h1>
     </header>
 
     {{ content }}
