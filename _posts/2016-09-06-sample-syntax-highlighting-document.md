@@ -1,6 +1,6 @@
 ---
 layout: post
-subject: consulting
+category: consulting
 title: Sample Syntax Highlighting Document
 summary: Testing syntax highlighters can be difficult without a sample document. Here is one in Ruby.
 ---

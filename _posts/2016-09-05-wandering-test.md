@@ -1,7 +1,7 @@
 ---
 layout: post
+category: wandering
 title: Wandering Test
-subject: wandering
 summary: Getting test data is hard. This post contains Lorem Ipsum text to make the process a little easier
 ---
 

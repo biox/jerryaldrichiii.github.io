@@ -1,12 +1,12 @@
 ---
 layout: default
-subject: wandering
+category: Consulting
 description: >
-  Posts located here are non-technical and not career specific. Ideally, these posts will serve as a public journal of my escapades that I can reference later or share with friends and family. Expect nothing of value here. 
+  Posts located here are specific to my career and are intended to document challenges I've encountered while consulting and/or to fill the gaps I've seen in the documentation online. Topics include anything from programming to philosophical ranting. 
 ---
 
 <div id="main">
-  {% assign posts = site.posts | where:'subject', 'wandering'%}
+  {% assign posts = site.posts | where:'category', 'consulting'%}
   <div class="row">
     {% for post in posts %}
       <article class="{% cycle '6u', '6u$' %} 12u(small)">

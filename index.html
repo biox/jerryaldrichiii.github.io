@@ -5,10 +5,10 @@ layout: default
 <div id="main">
   <div class="row">
     {% for page in site.pages offset=1 %}
-      {% if page.subject %}
+      {% if page.category %}
         <article class="{% cycle '6u', '6u$' %} 12u(small)">
           <header>
-            <h2><a href="{{ page.url }}">{{ page.subject }}</a></h2>
+            <h2><a href="{{ page.url }}">{{ page.category }}</a></h2>
           </header>
           <section>
             <p>{{ page.description }}</p>
