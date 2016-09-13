@@ -5,94 +5,74 @@
 @import 'vars';
 @import 'mixins';
 
-/*
-	Strata by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+$size-header-pad:    1.5em;
 
-$size-header-pad:		1.5em;
+h1 {
+  font-size: 1.5em;
+}
 
-/* Basic */
+h2 {
+  font-size: 1.2em;
+}
 
-	h1 {
-		font-size: 1.5em;
-	}
+h3 {
+  font-size: 1em;
+}
 
-	h2 {
-		font-size: 1.2em;
-	}
+section, article {
+  &.special {
+    text-align: center;
+  }
+}
 
-	h3 {
-		font-size: 1em;
-	}
+header {
+  &.major {
+    h2 {
+      font-size: 1.35em;
+    }
+  }
+}
 
-/* Section/Article */
+ul {
+  &.labeled-icons {
+    li {
+      padding-left: 2em;
 
-	section, article {
-		&.special {
-			text-align: center;
-		}
-	}
+      h3 {
+        line-height: 1.75em;
+      }
+    }
+  }
+}
 
-	header {
-		&.major {
-			h2 {
-				font-size: 1.35em;
-			}
-		}
-	}
+#header {
+  padding: ($size-header-pad * 1.5) $size-header-pad;
+  
+  h1 {
+    font-size: 1.35em;
+  }
+}
 
-/* List */
+#footer {
+  padding: ($size-header-pad * 1.5) $size-header-pad;
+}
 
-	ul {
-		&.labeled-icons {
-			li {
-				padding-left: 2em;
+#main {
+  padding: ($size-header-pad * 1.5) $size-header-pad (($size-header-pad * 1.5) - $size-element-margin) $size-header-pad;
 
-				h3 {
-					line-height: 1.75em;
-				}
-			}
-		}
-	}
+  > section {
+    margin: ($size-header-pad * 1.5) 0 0 0;
+    padding: ($size-header-pad * 1.5) 0 0 0;
+  }
+}
 
-/* Header */
-
-	#header {
-		padding: ($size-header-pad * 1.5) $size-header-pad;
-		
-		h1 {
-			font-size: 1.35em;
-		}
-	}
-
-/* Footer */
-
-	#footer {
-		padding: ($size-header-pad * 1.5) $size-header-pad;
-	}
-	
-/* Main */
-
-	#main {
-		padding: ($size-header-pad * 1.5) $size-header-pad (($size-header-pad * 1.5) - $size-element-margin) $size-header-pad;
-
-		> section {
-			margin: ($size-header-pad * 1.5) 0 0 0;
-			padding: ($size-header-pad * 1.5) 0 0 0;
-		}
-	}
-	
-/* Poptrox */
-
-	.poptrox-popup {
-		border-radius: 0;
-		
-		.nav-next,
-		.nav-previous {
-			&:before {
-				margin-top: -1em;
-			}
-		}
-	}
+.poptrox-popup {
+  border-radius: 0;
+  
+  .nav-next,
+  .nav-previous {
+    &:before {
+      margin-top: -1em;
+    }
+  }
+}
