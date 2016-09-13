@@ -4,7 +4,7 @@ layout: default
 
 <div id="main">
   <div class="row">
-    {% for page in site.pages offset=1 %}
+    {% for page in site.pages %}
       {% if page.category %}
         <article class="{% cycle '6u', '6u$' %} 12u(small)">
           <header>
