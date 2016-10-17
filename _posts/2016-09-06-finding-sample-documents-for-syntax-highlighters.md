@@ -1,15 +1,16 @@
 ---
 layout: post
-category: consulting
-title: Syntax Highlighting Samples
-summary: Testing syntax highlighters can be difficult without a sample document. Here is one in Ruby.
+title: Finding sample documents for syntax highlighters 
+category: other
+tags: [syntax, other]
+summary: Testing syntax highlighters can be difficult without a sample document. Here is a sample document in Ruby that I found.
 ---
 
-When selecting a syntax highlighting theme generally all that is presented to choose from is a short sample block. Most of the time it is a simple function that prints `Hello world` and if you're lucky has a comment. Unfortunately, making an informed decision with such little information is difficult.
+When selecting a syntax highlighting theme, generally all that is presented to choose from is a short sample block. Most of the time it is merely a simple function that prints `Hello world` and if you're lucky it has a comment. Unfortunately, making an informed decision with such little information is difficult.
 
-The solution here would be to write a sample document that contains examples of what you would like to see highlighted. However, the task of writing a lengthy sample document can be quite daunting. The next best solution would be to search for prefabricated documents. When I started down that path I quickly learned that crafting a search query to elicit the results I wanted was difficult.
+One solution would be to write a sample document that contains examples of what you would like to see highlighted. However, the task of writing a lengthy sample document can be quite daunting. The next best solution would be to search for prefabricated documents. When I started down that path I quickly learned that finding such a document is difficult.
 
-Eventually, I found [this](https://github.com/jneen/rouge/tree/master/spec/visual/samples) collection of documents. Below is and edited version of the Ruby sample:
+Eventually, I found [this](https://github.com/jneen/rouge/tree/master/spec/visual/samples) collection of documents. Below is an edited version of their Ruby sample:
 
 ```ruby
 #######

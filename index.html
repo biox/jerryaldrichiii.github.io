@@ -3,23 +3,16 @@ layout: default
 ---
 
 <div id="main">
-  <div class="row">
     {% for page in site.pages %}
-      {% if page.category %}
-        <article class="{% cycle '6u', '6u$' %} 12u(small)">
-          <header>
-            <h2><a href="{{ page.url }}">{{ page.category }}</a></h2>
-          </header>
-          <section>
-            <p>{{ page.description }}</p>
-          </section>
-          <footer>
-            <ul class="actions">
-              <li><a href="{{ page.url }}" class="button">Read More</a></li>
-            </ul>
-          </footer>
-        </article>
-      {% endif %}
+      {% if page.title %}
+      <section>
+        <h1><a href={{page.url}}>{{page.title}}</a></h1>
+        {% assign post_title = page.title | downcase %}
+        {% assign posts = site.posts | where:'category', post_title %}
+        {% for post in posts %}
+          <a href={{post.url}}><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{post.title}}</h3></a>
+        {% endfor %}
+      </section>
+     {% endif %}
     {% endfor %}
-  </div>
 </div>
