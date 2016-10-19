@@ -2,8 +2,7 @@ pre {
   -webkit-overflow-scrolling: touch;
   font-family: 'Courier New', monospace;
   font-size: 0.9em;
-  margin: 0 0 2em 0;
-
+  
   code {
     display: block;
     line-height: 1.75em;
@@ -25,14 +24,13 @@ code[class*=highlighter-rouge] {
 
 .highlight {
     background: black;
-
-    div[class*=highlighter-rouge] {
+    margin: 0 0 1em 0;
+    .highlighter-rouge & {
       background: black;
       border-radius: 0.35em;
       border: solid 2px black;
       font-family: 'Courier New', monospace;
       font-size: 0.9em;
-      margin: 0 0.25em;
       padding: 0.25em 0.65em;
       color: #00FF00;
     }
