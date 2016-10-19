@@ -26,7 +26,7 @@ code[class*=highlighter-rouge] {
 .highlight {
     background: black;
 
-    div[class*=-highlighter-rouge] {
+    div[class*=highlighter-rouge] {
       background: black;
       border-radius: 0.35em;
       border: solid 2px black;
@@ -36,7 +36,11 @@ code[class*=highlighter-rouge] {
       padding: 0.25em 0.65em;
       color: #00FF00;
     }
-
+  
+    span {
+      color: #00FF00;
+    }
+  
     .c     { color: #29c9ff; font-style: italic } // Comment
     .err   { color: #a61717; background-color: #e3d2d2 } // Error
     .k     { font-weight: bold } // Keyword
