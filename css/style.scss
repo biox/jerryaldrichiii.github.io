@@ -67,16 +67,13 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-h2, h3, h4, h5, h6 {
-  margin: 2em 0 ($size-element-margin * 0.5) 0;
-}
-
 h1 {
   font-size: 2em;
   line-height: 1.5em;
 }
 
 h2 {
+  margin: 1em 0 ($size-element-margin * 0.5) 0;
   font-size: 1.5em;
   line-height: 1.5em;
 }
