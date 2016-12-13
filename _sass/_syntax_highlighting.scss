@@ -2,7 +2,7 @@ pre {
   -webkit-overflow-scrolling: touch;
   font-family: 'Courier New', monospace;
   font-size: 0.9em;
-  
+
   code {
     display: block;
     line-height: 1.75em;
@@ -22,6 +22,17 @@ code[class*=highlighter-rouge] {
 
 }
 
+code[class*=language-none] {
+      background: #eeeeee;
+      margin: 0 0 1em 0;
+      border-radius: 0.35em;
+      font-family: 'Courier New', monospace;
+      font-size: 1em;
+      font-style: italic;
+      padding: 0.25em 0.65em;
+      color: #000000;
+}
+
 .highlight {
     background: black;
     margin: 0 0 1em 0;
@@ -34,11 +45,11 @@ code[class*=highlighter-rouge] {
       padding: 0.25em 0.65em;
       color: #00FF00;
     }
-  
+
     span {
       color: #00FF00;
     }
-  
+
     .c     { color: #29c9ff; font-style: italic } // Comment
     .err   { color: #a61717; background-color: #e3d2d2 } // Error
     .k     { font-weight: bold } // Keyword
