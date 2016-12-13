@@ -661,9 +661,6 @@ table {
       border-left: 0;
       border-right: 0;
 
-      &:nth-child(2n + 1) {
-        background-color: $color-border-bg;
-      }
     }
   }
 
