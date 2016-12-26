@@ -3,13 +3,13 @@ layout: post
 title: Automate - Deploying to Multiple Chef Servers
 category: chef
 tags: [chef, workflow, git, chef automate, automate, deploy]
-summary: Have more than more Chef server/organization? Want to deploy to those? Read this.
+summary: Have more than one Chef server/organization? Want to deploy to those? Read this.
 ---
 
 ## Problem Summary
-By default Automate is setup to deploy to a single Chef organization/server. This deployment usually occurs during the Publish phase. This is fine for most users, if all of your nodes are in the same Chef organization as your Automate infrastructure and version pinning is done correctly then there is no issue with this model.
+By default Automate is setup to deploy to a single Chef organization/server. This deployment usually occurs during the Publish phase. This is fine for most users if all of your nodes are in the same Chef organization as your Automate infrastructure. Additionally, if version pinning is done correctly then there is no issue with this model.
 
-For other users, they would like to have the Delivered stage deploy a cookbook to a separate Chef organization instead of converging on their production infrastructure. This guide is directed to that group of users.
+Some other users would like to have the Delivered stage deploy a cookbook to a separate Chef organization instead of converging on their production infrastructure. This guide is directed to that group of users.
 
 ## Deploy Phase
 The Deploy phase in Automate is intended to "deploy" the artifact created in the Publish phase to node(s) prior to testing. For the purpose of this guide we are only concerned with what happens during the Deploy phase of the Delivered stage.
@@ -23,7 +23,7 @@ The following items have to occur prior to deploying cookbooks to other Chef org
   - Knife configuration files (`knife.rb`) must be created and written to disk
 
 ## Creating Keys For Chef
-Before we can access another Chef organization we must have have a user and a key that have been granted access.
+Before we can access another Chef organization, we must have have a user and a key that has been granted access to that organization. For example, you might create a `production` user if you had a 'production' organization (similar to the automate user/automate org coupling that already exists).
 
 ### Creating a Chef User
 Chef users can be created either from your workstation with `knife` or on the Chef Server with `chef-server-ctl`. This guide covers the latter.
@@ -53,7 +53,8 @@ chef-server-ctl org-user-add USER_NAME ORGANIZATION_NAME
 ### Safely Storing Your Key(s)
 Secrets are hard. There are many solutions on how to store your private keys. One method is covered in my blog post about [using Chef Vault in Workflow](http://blog.jerryaldrichiii.com/chef/2016/12/12/automate-using-chef-vaults-in-workflow.html).
 
-If you wish to use the code snippet at the bottom of this guide you must add the following to your project vault (or your organization vault/your enterprise vault if the info is to be shared over multiple projects):
+Necessary secrets:
+*can be an Enterprise/Org/Project secret according to your need, see above blog post for reference*
 
 ```none
 ...
@@ -74,8 +75,8 @@ If you wish to use the code snippet at the bottom of this guide you must add the
 ...
 ```
 
-### Doing the Deploy
-Place the following code below `include_recipe 'delivery-truck::deploy'` in your `.delivery/build_cookbook/recipes/deploy.rb`
+### The Deploy Phase
+Place the following code below `include_recipe 'delivery-truck::deploy'` in `.delivery/build_cookbook/recipes/deploy.rb` within the pipeline you're working with.
 
 ```ruby
 case workflow_stage
@@ -149,6 +150,8 @@ when 'delivered'
   end
 end
 ```
+
+After adding to above code to your deploy phase, give it a test run! After a successful delivery you should see your new cookbook(s) arrive in your second Chef organization.
 
 ## Extra Resources
   - [Using Chef Vaults in Workflow](http://blog.jerryaldrichiii.com/chef/2016/12/12/automate-using-chef-vaults-in-workflow.html)
